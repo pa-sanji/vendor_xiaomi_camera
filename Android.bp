@@ -225,9 +225,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libFace3DTA",
                 "libQ6MSFR_manager_stub",
-                "libscveCommon_stub",
                 "liblog",
-                "libcdsprpc",
                 "libutils",
                 "libc++",
                 "libc",
@@ -236,6 +234,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // libscveCommon_stub and libcdsprpc are installed by the alioth vendor tree
+    // as raw prebuilt files, not as Soong modules; skip the DT_NEEDED check.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
@@ -282,10 +283,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcamera_metadata",
-                "libcom.qti.chinodeutils",
-                "libtriplecam_video_optical_zoom",
                 "libcutils",
-                "libmpbase",
                 "libz",
                 "liblog",
                 "libc++",
