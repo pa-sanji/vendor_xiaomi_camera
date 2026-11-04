@@ -253,7 +253,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libQ6MSFR_manager_stub.so",
             ],
             shared_libs: [
-                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -261,6 +260,10 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // libcdsprpc.so is installed by the alioth vendor tree as a raw prebuilt
+    // file, not as a Soong module. This is a prebuilt library, so nothing is
+    // linked here; skip the DT_NEEDED validation instead of requiring a module.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
@@ -383,7 +386,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libsupermoon.so",
             ],
             shared_libs: [
-                "libSNPE",
                 "libc++_shared",
                 "libc",
                 "libm",
@@ -393,6 +395,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // libSNPE.so is installed by the alioth vendor tree as a raw prebuilt file,
+    // not as a Soong module; skip the DT_NEEDED validation for this prebuilt.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
