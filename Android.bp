@@ -386,7 +386,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libsupermoon.so",
             ],
             shared_libs: [
-                "libc++_shared",
+                "libc++",
                 "libc",
                 "libm",
                 "libdl",
