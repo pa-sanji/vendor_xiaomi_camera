@@ -9,6 +9,8 @@ soong_namespace {
     // alioth trees built here do not contain; no module in this file resolves
     // through them.
     imports: [
+        "vendor/qcom/common/vendor/media/legacy",
+        "vendor/qcom/common/vendor/qseecomd",
         "vendor/xiaomi/alioth",
     ],
 }
@@ -559,14 +561,8 @@ cc_prebuilt_binary {
                 "libc++",
                 "libcutils",
                 "liblog",
-                "libofflinelog",
                 "libsync",
-                "com.qti.feature2.gs",
-                "com.qti.feature2.generic",
-                "com.qti.feature2.mfsr",
-                "com.qti.feature2.rt",
                 "libcamera_metadata",
-                "libchilog",
                 "libhardware",
                 "libhidlbase",
                 "libhidltransport",
@@ -576,7 +572,6 @@ cc_prebuilt_binary {
                 "vendor.qti.hardware.vpp@1.1",
                 "vendor.qti.hardware.vpp@1.2",
                 "vendor.qti.hardware.camera.postproc@1.0-service-impl",
-                "libxml",
                 "libz",
                 "libdl",
                 "libc",
@@ -584,6 +579,9 @@ cc_prebuilt_binary {
             ],
         },
     },
+    // Dependencies on raw vendor blobs are dropped: these are prebuilt
+    // libraries, nothing is linked at build time.
+    check_elf_files: false,
     compile_multilib: "64",
     strip: {
         none: true,
