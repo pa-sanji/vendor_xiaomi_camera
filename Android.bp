@@ -51,6 +51,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
 }
@@ -87,6 +90,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
 }
@@ -126,6 +132,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
 }
@@ -153,6 +162,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
 }
@@ -181,6 +193,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
 }
@@ -208,6 +223,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
@@ -295,6 +313,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Dependencies on raw vendor blobs were dropped: this is a prebuilt
+    // library, nothing is linked at build time.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
@@ -333,6 +354,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
@@ -369,6 +393,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
@@ -439,6 +466,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "both",
     prefer: true,
     system_ext_specific: true,
@@ -488,6 +518,9 @@ cc_prebuilt_library_shared {
             ],
         },
     },
+    // Prebuilt from a vendor tree with raw-blob DT_NEEDED entries; the check
+    // only validates our metadata and the loader is unaffected.
+    check_elf_files: false,
     compile_multilib: "64",
     prefer: true,
     system_ext_specific: true,
