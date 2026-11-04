@@ -3,11 +3,13 @@
 //
 
 soong_namespace {
+    // Only namespaces that exist in this tree. The upstream repository also
+    // imports hardware/qcom-caf/common/libqti-perfd-client,
+    // vendor/qcom/opensource/display and vendor/xiaomi/sm8250-common, which the
+    // alioth trees built here do not contain; no module in this file resolves
+    // through them.
     imports: [
-        "hardware/qcom-caf/common/libqti-perfd-client",
-        "vendor/qcom/opensource/display",
         "vendor/xiaomi/alioth",
-        "vendor/xiaomi/sm8250-common",
     ],
 }
 
